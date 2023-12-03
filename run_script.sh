@@ -7,10 +7,10 @@
 #SBATCH --job-name=sl_test
 
 #SBATCH --mail-type=BEGIN,END
-#SBATCH --mail-user=felix.krones@oii.ox.ac.uk
+#SBATCH --mail-user=your.emails@your.server
 
 module load Anaconda3
-source activate /data/inet-multimodal-ai/wolf6245/envs/example_env
+source activate /path_to_envs_dir/envs/your_env_name
 conda info --env
 
 my_argument="My_new_argument"
