@@ -15,6 +15,7 @@ This repository contains a simple "Hello World" Python script designed to run on
 1. To set up the Python environment on your cluster, run the `build_env.sh` script. This script installs necessary Python packages as specified in `requirements.txt`.
 
     sh build_env.sh
+
 2. Ensure that the same environment name is used in both `build_env.sh` and `run_script.sh` for consistency.
 
 ## Running the Script

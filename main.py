@@ -1,3 +1,4 @@
+import sys
 import numpy as np
 from optparse import OptionParser
 
@@ -12,6 +13,7 @@ def hello_world_with_numpy(argument: str) -> None:
     Parameters:
     argument (str): The argument to be printed alongside the greeting.
     """
+
     print("Hello, World!")
     print("Received argument:", argument)
 
@@ -20,17 +22,20 @@ def hello_world_with_numpy(argument: str) -> None:
     print("Here's a simple NumPy array:", example_array)
 
 
-def get_args_parser(main_args=True):
+def get_args_parser(main_args: bool=True):
     parser = OptionParser()
     parser.add_option("-a", "--argument", dest="argument", 
-                      type="string", default="DefaultArgument",
+                      type=str, default="DefaultArgument",
                       help="Provide an argument for the script")
     
-    (options, args) = parser.parse_args(args=main_args and sys.argv[1:] or [])
-    return options
+    if main_args:
+        (options, args) = parser.parse_args()
+        return options
+    else:
+        return parser
 
 
 if __name__ == "__main__":
-    import sys
     options = get_args_parser()
     hello_world_with_numpy(options.argument)
+    print("Done!")
