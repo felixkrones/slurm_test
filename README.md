@@ -10,6 +10,7 @@ This repository contains a simple "Hello World" Python script designed to run on
 - `build_env.sh`: Script to build the Python environment on the cluster.
 - `run_script.sh`: Script to schedule the `main.py` script as a job on the cluster using Slurm.
 - `requirements.txt`: List of Python packages required to run `main.py`.
+- `main_gpu_test.py`: This is a new file to test the GPUs.
 
 ## Setting Up the Environment
 1. To set up the Python environment on your cluster, run the `build_env.sh` script. This script installs necessary Python packages as specified in `requirements.txt`.
